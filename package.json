@@ -1,0 +1,44 @@
+{
+  "name": "dsh-self-trigger",
+  "version": "1.0.0",
+  "description": "Self-trigger for DeepSeek Harness: when the host has been idle, the agent may inject one turn into a chosen session on its own (with budget, daily cap, quiet hours and a persisted policy file). Zero third-party dependencies.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./rules": "./lib/rules.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/rules.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/rules.test.mjs"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "self-trigger",
+    "proactive",
+    "idle",
+    "schedule",
+    "agent"
+  ],
+  "license": "MIT",
+  "author": "Abyss",
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
