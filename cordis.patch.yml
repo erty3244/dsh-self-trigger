@@ -1,0 +1,3 @@
+- insert:
+    - id: self-trigger
+      name: 'dsh-self-trigger'
